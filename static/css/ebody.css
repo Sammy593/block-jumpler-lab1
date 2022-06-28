@@ -1,17 +1,19 @@
+/*Estilo de navbar*/
 nav a{
     margin-left: 20px;
 }
-
+/*Estilos para etiqueta canvas*/
 canvas {
     border: 2px solid black;
     background-color:rgba(146, 255, 219, 0.753);
 }
 
+/* Estilos para contenedor de lienzo canvas*/
 .container{
     display: flex;
     justify-content: center;
 }
-
+/*Estilos para seccion de controles*/
 .section2{
     display: flex;
     justify-content: center;

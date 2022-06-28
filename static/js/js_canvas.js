@@ -194,8 +194,8 @@ function detectCollision(){
     if(playerRight > blockLeft &&
         playerLeft < blockLeft &&
         playerBottom > blockTop){
-        clearInterval(interval);
-        gameOver();
+        clearInterval(interval); //Se elimina la actualizacion periodica de la funcion updateCanvas
+        gameOver();//Mostrar alerta al perder
     }
 }
 
