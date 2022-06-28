@@ -1,0 +1,19 @@
+nav a{
+    margin-left: 20px;
+}
+
+canvas {
+    border: 2px solid black;
+    background-color:rgba(146, 255, 219, 0.753);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.section2{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
