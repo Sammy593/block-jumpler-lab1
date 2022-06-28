@@ -43,6 +43,11 @@ var block;
 var score = 0;
 var scoreLabel;
 
+/*
+    Variable para saber si el jugador a perdido o no
+*/
+var isGameOver = false;
+
 //Esta funcion es la que será llamada en el archivo html
 function startGame(){
     gameCanvas.start();
@@ -189,7 +194,8 @@ function detectCollision(){
     if(playerRight > blockLeft &&
         playerLeft < blockLeft &&
         playerBottom > blockTop){
-        gameCanvas.stop();
+        clearInterval(interval);
+        gameOver();
     }
 }
 
@@ -206,6 +212,9 @@ function createScoreLabel(x, y){
     };
 }
 
+function gameOver(){  
+    alert("Game over");
+}
 
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
@@ -215,5 +224,3 @@ document.body.onkeyup = function(e){
         }, 1000);
     }
 };
-
-

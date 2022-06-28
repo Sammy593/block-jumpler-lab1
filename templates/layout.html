@@ -25,10 +25,18 @@
           {% endblock %}
         </div> 
       </section>
-     
+      <!--  Seccion para controles  -->
+      <section class="section2">
+        <!-- Boton para reiniciar juego (recargamos pagina)-->
+        <button class="btn btn-primary" onclick="window.location.href = '/'">Iniciar / Reiniciar</button>
+      </section>
+    
     </main>
  
     <!-- footer -->
+    <footer class="footer text-center">
+      <h2>Samuel Ledesma</h2>
+    </footer>
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="{{url_for('static', filename='js/js_canvas.js')}}"></script>
