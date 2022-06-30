@@ -1,6 +1,6 @@
-## Laboratorio 1
+# Laboratorio 1
 
-# Block Jumper Game
+## Block Jumper Game
 
 <p align="center">
   <img max-height="560" src="https://github.com/Sammy593/block-jumpler-lab1/blob/main/assets/images/block-jump-game.jpg" alt="Block Jumper">
