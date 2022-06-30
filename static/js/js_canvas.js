@@ -8,8 +8,8 @@ var container = document.getElementById("container");
 var gameCanvas = {
     canvas: document.getElementById("canvas"), //Objeto canvas de html
     start: function(){
-        this.canvas.width = canvasWidth; //Asignar anchura de lienza canvas
-        this.canvas.height = canvasHeight;//Asignar altura de lienza canvas
+        this.canvas.width = canvasWidth; //Asignar anchura de lienzo canvas
+        this.canvas.height = canvasHeight;//Asignar altura de lienzo canvas
         this.context = this.canvas.getContext("2d");
         container.appendChild(this.canvas, container.childNodes[0]);//Añadir elemento canvas al contenedor
     }
@@ -102,10 +102,8 @@ function createPlayer(width, height, x){
     };
 }
 
-//Funcion para actualizar la ubicacion de nuestro jugador en el lienzo y hacer que caiga
+//Funcion para actualizar la ubicacion de los elementos en el lienzo
 function updateCanvas(){
-    detectCollision();
-
     ctx = gameCanvas.context;
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
@@ -121,6 +119,8 @@ function updateCanvas(){
     //Llamamos a funciones creadas en el elemento score (createScoreLabel())
     scoreLabel.text = "Score: "+score;
     scoreLabel.draw();
+
+    detectCollision();
 }
 
 /*
@@ -194,8 +194,8 @@ function detectCollision(){
     if(playerRight > blockLeft &&
         playerLeft < blockLeft &&
         playerBottom > blockTop){
-        clearInterval(interval); //Se elimina la actualizacion periodica de la funcion updateCanvas
-        gameOver();//Mostrar alerta al perder
+        gameOver();
+        clearInterval(interval); //Se elimina el intervalo de repeticion de la funcion updateCanvas 
     }
 }
 
@@ -213,7 +213,10 @@ function createScoreLabel(x, y){
 }
 
 function gameOver(){  
-    alert("Game over");
+    ctx = gameCanvas.context;
+    ctx.font = "25px Marker Felt";
+    ctx.fillStyle = "black"; 
+    ctx.fillText("Game over", 250, 200);
 }
 
 document.body.onkeyup = function(e){
